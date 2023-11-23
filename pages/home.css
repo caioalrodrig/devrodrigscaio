@@ -1,4 +1,3 @@
-
 @import url('https://fonts.google.com/specimen/Share+Tech+Mono?query=tech');
 html{ 
     height: 100%;
@@ -7,8 +6,9 @@ body{
     --bg-nav: #434f67;
     --bg-footer: rgba(0, 0, 0, 0.848);
     --bg-home: rgb(205, 208, 209);
+    --btn-bg: #434f67;
+    --btn-bo: rgba(0, 0, 0, 0.848);
     /* --btn-dark: url('../utils/imgs/jumbotron.svg'); */
-
 
     display: flex;  
     width: 100%;
@@ -23,22 +23,24 @@ body{
   
 }
 .dark{
-    --bg-nav:rgba(19, 19, 19, 0.848);
+    --bg-nav:#17294c;
     --bg-footer: rgba(19, 19, 19, 0.848);
     --bg-home:  #434f67;
-
+    --btn-bg: #17294cad;
+    --btn-bo: #434f67;
 
 }
 
 /* NAVBAR                  
         */
-nav{
+.navbar{
     display:flex;
     justify-content: space-between;
     background-color: var(--bg-nav);
-    padding: 1em;       
+    padding: 0.5em;       
     align-items: center; 
 }
+.navbar.scrolled{ opacity: 0.5; }
 div:not(.pc-MENU){
     display: flex;
     justify-content: center;
@@ -47,9 +49,15 @@ div:not(.pc-MENU){
     min-height: 30vh;
     align-items:start;
     margin-left: 1em;
-    /* justify-content: flex-end;
-    justify-content: space-between; */
-
+}
+div.container{
+    display: flex;
+    flex-direction: column;
+    max-width: 50vw;
+    padding: 0;
+    margin: 0;
+    align-content: flex-start;
+    justify-content: center;
 }
 div.MENU-nav{
     display: flex;
@@ -65,10 +73,14 @@ div.pc-MENU{
     margin: 0;
     flex-wrap: wrap;
     align-items:start;
-    
 
 }
-nav a:not(.logo){
+div.MENU{
+    display: flex;
+    flex-direction: row;
+}
+div.title{ margin:0}
+header a:not(.logo){
     color: #FFF;
     text-decoration: none;
     font-family: 'Share Tech Mono', monospace;
@@ -93,16 +105,16 @@ nav a:not(.logo){
     font-family: 'Share Tech Mono', monospace;
 
 }
-.navbar .title_one:hover {
+header .title_one:hover {
     color:rgb(128, 234, 29);
 }
-.navbar:has(.title_one:hover) .title_two {
+header:has(.title_one:hover) .title_two {
     color: rgb(29, 220, 234);
 }
-.navbar:has(.title_two:hover) .title_one {
+header:has(.title_two:hover) .title_one {
     color:rgb(128, 234, 29);
 }
-.navbar .title_two:hover {
+header .title_two:hover {
     color: rgb(29, 220, 234);
 }
 
@@ -124,7 +136,7 @@ li{
     margin-right:1em;
     list-style:none;
 }
-nav .btn-tog{
+header .btn-tog{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -133,23 +145,25 @@ nav .btn-tog{
     cursor: pointer;
     justify-self: flex-end;
     margin-right: 8px;
+    background-color: var(--btn-bg);
+    border: 2px solid var(--btn-bo); 
 }
-nav .btn{
+header .btn{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 60px; 
     height: 30px; 
-    border: 2px solid #050505; 
+    border: 2px solid var(--btn-bo); 
     border-radius: 20px; 
-    background-color: #434f67; 
+    background-color: var(--btn-bg); 
     color: #ffffff; /* Cor do texto ou do ícone */
     cursor: pointer;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao botão */
     margin-right: 8px;
 
 }
-nav .btn:hover{
+header .btn:hover{
     background-color:rgb(128, 234, 29) ;
     border: 2px solid rgb(128, 234, 29);
 }
@@ -166,10 +180,19 @@ nav .btn:hover{
     /*SMARTPHONE*/
     .title_one{font-size: 35px;}
     .title_two{font-size: 35px;}
+    div.title{min-height: 10vh;}
+    div.MENU.d-md-none{
+        min-height: 10vh;
+        margin-bottom: 5vh ;
+        margin-left: 0;
+    }
+    div#menu_colapse.collapse-horizontal.collapse.show{min-height: 10px; margin-left:0; min-width: 60vw;}
+    div.card.card-body.MENUson{min-height: 10vh; margin-left: 0; min-width: 60vw; padding: 0;}
   }
 
 /* MAIN 
         CONTENT */
+
 .MENU{
     height: 10px;
     margin: 0;
@@ -183,9 +206,11 @@ nav .btn:hover{
     background-color: #434f67;
 }
 .menulist{
+    display: flex;
     list-style:none;
     align-items:  center;
     padding: 0;
+    flex-direction: row;
 }
 body a {
     color: #FFF;
@@ -194,6 +219,7 @@ body a {
     font-size: calc(10px + 2vmin);
 }
 .jumbotron {
+    padding-top: 240px;
     display: flex;
     width: 100vh;
     align-self: center;
@@ -259,3 +285,17 @@ nav#footer{
     font-weight: bold;
     color: rgb(128, 234, 29);
 }
+
+/* ANIMATIONS 
+    */
+
+    a.d-none.d-sm-none.d-md-block.logo:hover{
+    transform: rotate(60deg);
+    }
+
+    .social_list li img:hover{
+        width: 50px;
+        height: auto;
+        box-shadow: 3px 3px 0px rgba(213, 212, 212, 0.356)
+        
+    }
