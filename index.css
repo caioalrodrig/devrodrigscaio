@@ -236,6 +236,42 @@ body a {
     content: url('utils/imgs/jumbotron.svg');
 
 }
+/* CONTACT US 
+    */
+    textarea {
+        width: 100%;
+      }
+      .content-head {
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin: 2em 0 1em;
+      }
+      .is-center {
+        text-align: center;
+      }
+      .button-success {
+        color: white;
+        border-radius: 4px;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        background: rgb(28, 184, 65); /* this is a green */
+      }
+      .button-xlarge {
+        font-size: 125%;
+      }
+      button {
+        float: right;
+      }
+      #name, #email {
+        width: 50%;
+      }
+      .honeypot-field {
+        display: none;
+      }
+
+
+
+
 /* FOOTER
          */
 
@@ -297,5 +333,9 @@ nav#footer{
         width: 50px;
         height: auto;
         box-shadow: 3px 3px 0px rgba(213, 212, 212, 0.356)
-        
     }
+        
+.copy_right span {
+    font-weight: bold;
+    color: rgb(128, 234, 29);
+}
