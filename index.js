@@ -1,10 +1,16 @@
 /* Botão de alteração das css variables */
 const toggle = document.getElementById("toggle");
+const hello_img = document.getElementById("hello");
+
 toggle.addEventListener("click", () => {
   document.body.classList.toggle("dark");
-  if (theme === "dark") {
-    window.localStorage.setItem("theme", "light");
-  } else window.localStorage.setItem("theme", "dark");
+
+  // Verifica se a classe "dark" está presente no body
+  if (document.body.classList.contains("dark")) {
+    hello_img.src = 'utils/imgs/help-me.svg';
+  } else {
+    hello_img.src = 'utils/imgs/help-me-d.svg';
+  }
 });
 
 
@@ -20,3 +26,17 @@ document.addEventListener('scroll', () => {
         navbar.classList.remove('scrolled');
     }
 });
+/*Aguarda o reload*/
+document.addEventListener('DOMContentLoaded', () => {
+  const jumbotron = document.querySelector('.jumbotron');
+  var hello = document.getElementById("hello");
+
+  setTimeout(() => {
+    jumbotron.style.transform = "translateX(0)";
+  }, 500);
+  setTimeout(() => {
+    hello.style.transform = "translateX(-40%)";
+  }, 750);
+  
+
+})

@@ -8,7 +8,6 @@ body{
     --bg-home: rgb(205, 208, 209);
     --btn-bg: #434f67;
     --btn-bo: rgba(0, 0, 0, 0.848);
-    /* --btn-dark: url('../utils/imgs/jumbotron.svg'); */
 
     display: flex;  
     width: 100%;
@@ -39,6 +38,7 @@ body{
     background-color: var(--bg-nav);
     padding: 0.5em;       
     align-items: center; 
+    padding-bottom: 0;
 }
 .navbar.scrolled{ opacity: 0.5; }
 div:not(.pc-MENU){
@@ -181,15 +181,27 @@ header .btn:hover{
     .title_one{font-size: 35px;}
     .title_two{font-size: 35px;}
     div.title{min-height: 10vh;}
-    div.MENU.d-md-none{
-        min-height: 10vh;
-        margin-bottom: 5vh ;
-        margin-left: 0;
-    }
-    div#menu_colapse.collapse-horizontal.collapse.show{min-height: 10px; margin-left:0; min-width: 60vw;}
-    div.card.card-body.MENUson{min-height: 10vh; margin-left: 0; min-width: 60vw; padding: 0;}
-  }
 
+    div.MENU.d-md-none {
+        min-height: 10vh;
+        margin-bottom: 5vh;
+        margin-left: 0;
+        width: fit-content;
+    }
+    
+    div#menu_colapse.collapse-horizontal.collapse.show {
+        min-height: 10px;
+        margin-left: 0;
+        min-width: 60vw; /* Adicione ponto e vírgula aqui */
+    }
+    
+    div.card.card-body.MENUson {
+        min-height: 10vh;
+        margin-left: 0;
+        min-width: 60vw;
+        padding: 0;
+    }
+  }
 /* MAIN 
         CONTENT */
 
@@ -218,11 +230,34 @@ body a {
     font-family: 'Share Tech Mono', monospace;
     font-size: calc(10px + 2vmin);
 }
+.greet{
+    max-width: 100%;
+    margin: 0;
+    padding-top: 180px;
+}
 .jumbotron {
-    padding-top: 240px;
+
     display: flex;
     width: 100vh;
     align-self: center;
+    max-width: 100%;
+    margin-left: 0;
+    transition: transform 0.5s ease-in-out;
+    background-color: rgba(0, 255, 255, 0);
+    transform: translateX(-200%);
+
+    
+}
+div .cartoon{
+    display: flex;
+    justify-content: center;
+    min-width: 10vw;
+    margin-left: 0;
+    padding-top: 10vh;
+}
+#hello{
+    transform: translateX(600%);
+    transition: transform 1s ease-in-out; /* Adicionando uma transição suave */
 
 }
 
@@ -230,9 +265,10 @@ body a {
     margin: 20px auto;
     max-height: 200vh;
     transition: transform 0.8s ease-in-out;
+    max-width: 100%;
+    
 }
 .jumbotron img:hover{
-
     content: url('utils/imgs/jumbotron.svg');
 
 }
