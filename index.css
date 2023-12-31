@@ -173,6 +173,7 @@ header .btn:hover{
     /* TABLET*/
     .title_one{font-size: 31px;}
     .title_two{font-size: 31px;}
+    .greet{ margin-top: 220px;}
     
   }
 
@@ -245,6 +246,7 @@ body a {
     transition: transform 0.5s ease-in-out;
     background-color: rgba(0, 255, 255, 0);
     transform: translateX(-200%);
+    padding: 0;
 
     
 }
@@ -270,8 +272,8 @@ div .cartoon{
 }
 .jumbotron img:hover{
     content: url('utils/imgs/jumbotron.svg');
-
 }
+
 /* CONTACT US 
     */
     textarea {
@@ -311,52 +313,53 @@ div .cartoon{
 /* FOOTER
          */
 
-nav#footer{
-    display: flex;
-    margin-bottom: auto; 
-    width: 100%;
-    flex-direction: column;
-    min-height: 5vh;
-    max-height: 150px;
-    align-self: baseline;
-    width: 100%;
-    background-color: var(--bg-footer);
-    color: #fff;
-    padding: 3em;
-    text-align: center;
-
-}
-
-.social_list {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-  }
-  
-.social_list li {
-    margin: 0 1em;
-
-}
-
-.social_list li:hover {
-    color: #ffbb33;
-}
-  
-.social_list img {
-    width: 4vh;
-    height: auto;
-    cursor: pointer;
-  }
-  
-.copy_right {
-    margin: 0 0;
-
-  }
-  
-.copy_right span {
-    font-weight: bold;
-    color: rgb(128, 234, 29);
-}
+         nav#footer{
+          display: flex;
+          margin-bottom: auto; 
+          width: 100%;
+          flex-direction: column;
+          min-height: 5vh;
+          max-height: 150px;
+          align-self: baseline;
+          width: 100%;
+          background-color: var(--bg-footer);
+          color: #fff;
+          padding: 3em;
+          text-align: center;
+      
+      }
+      
+      .social_list {
+          display: flex;
+          justify-content: center;
+          list-style-type: none;
+        }
+        
+      .social_list li {
+          margin: 0 1em;
+      
+      }
+      
+      .social_list li:hover {
+          color: #ffbb33;
+      }
+        
+      .social_list img {
+          width: 4vh;
+          height: auto;
+          cursor: pointer;
+        }
+        
+      .copy_right {
+          margin: 0 0;
+      
+        }
+        
+      .copy_right span {
+          font-weight: bold;
+          color: rgb(128, 234, 29);
+      }
+      
 
 /* ANIMATIONS 
     */
@@ -374,4 +377,72 @@ nav#footer{
 .copy_right span {
     font-weight: bold;
     color: rgb(128, 234, 29);
-}
+  }
+
+.div-body {
+    display: flex;
+    width: 95%;
+    height: fit-content;
+    align-self: center;
+    border-left: none;
+  }
+  
+  .slider {
+    display: flex;
+    width: 100%;
+    /* max-width: 800px; */
+    height: 700px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .slide {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    height: fit-content;
+    position: absolute;
+    transition: all 0.5s;
+
+  }
+  
+  .slide img {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .btn-slide {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    z-index: 10px;
+    cursor: pointer;
+    font-size: 5vw;
+    font-weight: bolder;
+    font-family: 'Share Tech Mono';
+    background-color: #ffffff00;
+    color:#f38cfb;
+  }
+  
+  .btn-slide:active {
+    color:aqua;
+    font-weight: bolder;
+
+  }
+
+  .btn-slide:hover {
+    font-weight: 100;
+  }
+  .btn-prev {
+    top: 45%;
+    left: 2%;
+  }
+  
+  .btn-next {
+    top: 45%;
+    right: 4%;
+  }
