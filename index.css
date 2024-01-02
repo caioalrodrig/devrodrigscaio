@@ -26,9 +26,9 @@ body{
     --bg-footer: rgba(19, 19, 19, 0.848);
     --bg-home:  #434f67;
     --btn-bg: #17294cad;
-    --btn-bo: #434f67;
-
+    --btn-bo: #4d576c;
 }
+
 
 /* NAVBAR                  
         */
@@ -64,7 +64,7 @@ div.MENU-nav{
     flex-direction: column;
     margin: 0;
     align-items: flex-end;
-    justify-content: space-evenly;
+
 
 }
 div.pc-MENU{
@@ -133,6 +133,7 @@ header .title_two:hover {
 }
 
 li{  
+    
     margin-right:1em;
     list-style:none;
 }
@@ -140,13 +141,22 @@ header .btn-tog{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60px; 
-    height: 30px; 
+    width: fit-content;
+    min-width: 3vw; 
+    height: 3.5vh; 
     cursor: pointer;
     justify-self: flex-end;
     margin-right: 8px;
+    color: var(--btn-bo);
     background-color: var(--btn-bg);
     border: 2px solid var(--btn-bo); 
+    font-family: 'Share Tech Mono', monospace;
+    font-weight: bolder;
+    font-size: larger;
+    border: 0.5px solid var(--btn-bo); 
+    border-radius: 15px; 
+    margin-top: 2vh;
+    
 }
 header .btn{
     display: flex;
@@ -161,6 +171,7 @@ header .btn{
     cursor: pointer;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao botão */
     margin-right: 8px;
+    margin-top: 2em;
 
 }
 header .btn:hover{
@@ -251,9 +262,13 @@ body a {
 div .cartoon{
     display: flex;
     justify-content: center;
-    min-width: 10vw;
-    margin-left: 0;
-    padding-top: 10vh;
+    min-width: 2vw;
+    max-width: 11vw;
+    margin-right: 0;
+    padding-top: 16vh;
+}
+img#baloon{
+  margin-right: 15vw;
 }
 #hello{
     transform: translateX(600%);
@@ -304,7 +319,9 @@ div .cartoon{
       .honeypot-field {
         display: none;
       }
-
+      label{
+        font-family: 'Share Tech Mono', monospace;
+      }
 
 
 
@@ -339,7 +356,7 @@ nav#footer{
 }
 
 .social_list li:hover {
-    color: #ffbb33;
+    color:#434f67
 }
   
 .social_list img {
@@ -375,3 +392,17 @@ nav#footer{
     font-weight: bold;
     color: rgb(128, 234, 29);
 }
+
+div#portfolio{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+div.port-card{
+  display: flex;
+  border-color:red;
+  border-radius: 2px;
+  min-height: 300px;
+
+}
+
