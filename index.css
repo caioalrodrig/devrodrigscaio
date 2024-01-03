@@ -35,12 +35,16 @@ body{
 .navbar{
     display:flex;
     justify-content: space-between;
+    background-position: 90% 100%;
     background-color: var(--bg-nav);
     padding: 0.5em;       
     align-items: center; 
     padding-bottom: 0;
 }
-.navbar.scrolled{ opacity: 0.5; }
+.navbar.scrolled{
+   opacity: 0.5;
+   background: radial-gradient(circle, #e8dede45, var(--bg-nav)); 
+}
 div:not(.pc-MENU){
     display: flex;
     justify-content: center;
@@ -91,12 +95,14 @@ header a:not(.logo){
 .logo{
     max-width: 150px;
     margin: 5px 5px 5px 0;
+    animation: girar 16s linear infinite; 
 
   }
 .title_one{
     font-size: 50px;
     color:rgb(29, 220, 234);
     font-family: 'Share Tech Mono', monospace;
+    
 
 }
 .title_two{
@@ -148,7 +154,7 @@ header .btn-tog{
     justify-self: flex-end;
     margin-right: 8px;
     color: var(--btn-bo);
-    background-color: var(--btn-bg);
+    background-color: #ffffff00;
     border: 2px solid var(--btn-bo); 
     font-family: 'Share Tech Mono', monospace;
     font-weight: bolder;
@@ -157,6 +163,10 @@ header .btn-tog{
     border-radius: 15px; 
     margin-top: 2vh;
     
+}
+header .btn-tog:active{
+  background-color: chartreuse;
+  transition: transform 2s;
 }
 header .btn{
     display: flex;
@@ -241,49 +251,47 @@ body a {
     font-family: 'Share Tech Mono', monospace;
     font-size: calc(10px + 2vmin);
 }
-.greet{
-    max-width: 100%;
-    margin: 0;
-    padding-top: 180px;
-}
-.jumbotron {
 
+.jumbotron {
     display: flex;
-    width: 100vh;
+    flex-direction: row;
     align-self: center;
     max-width: 100%;
     margin-left: 0;
     transition: transform 0.5s ease-in-out;
     background-color: rgba(0, 255, 255, 0);
-    transform: translateX(-200%);
+    transform: translateX(-200%);   
+    padding: 0; 
+    padding-top: 30vh;
 
-    
 }
-div .cartoon{
-    display: flex;
-    justify-content: center;
-    min-width: 2vw;
-    max-width: 11vw;
-    margin-right: 0;
-    padding-top: 16vh;
-}
-img#baloon{
-  margin-right: 15vw;
+.greet{
+  max-width: 100vw;
+  width: 80vw;
+  height: fit-content;
+  margin: 0;
 }
 #hello{
     transform: translateX(600%);
     transition: transform 1s ease-in-out; /* Adicionando uma transição suave */
+    width: 14vw;
+    height: auto;
+    z-index: 1;
 
 }
-
 #jumbo{
     margin: 20px auto;
     max-height: 200vh;
     transition: transform 0.8s ease-in-out;
-    max-width: 100%;
+    position: relative;
+    z-index: 2;
+    width: 40vw;
+    height: auto;
+    margin: 0;
+    min-width: 350px;
     
 }
-.jumbotron img:hover{
+#jumbo:hover{
     content: url('utils/imgs/jumbotron.svg');
 
 }
@@ -330,17 +338,16 @@ img#baloon{
 
 nav#footer{
     display: flex;
-    margin-bottom: auto; 
+    flex-direction: column;
     width: 100%;
     flex-direction: column;
-    min-height: 5vh;
-    max-height: 150px;
-    align-self: baseline;
-    width: 100%;
+    height: fit-content;
+    width: 100vw;
     background-color: var(--bg-footer);
     color: #fff;
-    padding: 3em;
+    padding: 1em;
     text-align: center;
+    justify-self: center;
 
 }
 
@@ -356,7 +363,9 @@ nav#footer{
 }
 
 .social_list li:hover {
-    color:#434f67
+    color:#434f67;
+    transform: translateY(-1vh);
+    transition: transform 1s;
 }
   
 .social_list img {
@@ -367,12 +376,12 @@ nav#footer{
   
 .copy_right {
     margin: 0 0;
-
   }
   
 .copy_right span {
     font-weight: bold;
     color: rgb(128, 234, 29);
+    font-family: 'Share Tech Mono', monospace;
 }
 
 /* ANIMATIONS 
@@ -406,3 +415,14 @@ div.port-card{
 
 }
 
+.hidden{
+  display: none;
+}
+@keyframes girar {
+  from {
+    transform: rotate(0deg); 
+  }
+  to {
+    transform: rotate(360deg); 
+  }
+}
