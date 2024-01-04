@@ -404,15 +404,51 @@ nav#footer{
 
 div#portfolio{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
+  margin-top: 10vh;
+  align-items: center;
+}
+div#double-gif{
+  display: flex;
+  flex-direction: row;
 }
 div.port-card{
   display: flex;
-  border-color:red;
+  flex-direction: row;
   border-radius: 2px;
-  min-height: 300px;
+  margin-top: 5vh;
+}
 
+#gif1{
+  max-width: 30vw;
+  min-width: 200px;
+  transform: translateX(6vw);
+
+}
+#gif2{
+  max-width: 30vw;
+  transform: translateY(-6vh);
+  min-width: 200px;
+}
+#smartphone{
+  position: relative;
+  height: 30vh;
+  width: auto;
+  right: 30%;
+  top: 30px;
+
+}
+#tablet{
+  position: relative;
+  height: 30vh;
+  width: auto;
+  
+}
+span {
+  max-width: 20vw;
+  min-width: 150px;
+  padding: 3vw;
 }
 
 .hidden{

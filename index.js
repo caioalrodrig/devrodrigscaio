@@ -63,7 +63,7 @@ const navbar = document.querySelector('.navbar')
 document.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY
 
-    if (scrollPosition > 30) {
+    if (scrollPosition > 90) {
         navbar.classList.add('scrolled')
         logo.classList.add("hidden")
         
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
     jumbotron.style.transform = "translateX(0)";
   }, 500);
   setTimeout(() => {
-    hello.style.transform = "translateX(-25%)";
+    hello.style.transform = "translateX(-20%)";
   }, 750);
   
 
