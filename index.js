@@ -99,7 +99,42 @@ document.addEventListener('DOMContentLoaded', () => {
   
 
 })
+const canvas = document.getElementById('cmatrixCanvas');
+const ctx = canvas.getContext('2d');
 
+
+// Configuração dos caracteres
+const characters = '||||||||||||||';
+const fontSize = canvas.width/12;
+const columns = Math.floor(canvas.width / fontSize);
+
+const drops = [];
+for (let i = 0; i < columns; i++) {
+  drops[i] = Math.random() * canvas.height;
+}
+
+function draw() {
+
+  ctx.fillStyle = 'black';
+  ctx.fillRect(0, 1, canvas.width, canvas.height);
+
+  ctx.fillStyle = '#f38cfb';
+  ctx.font = `${fontSize}px monospace`;
+
+  for (let i = 0; i < drops.length; i++) {
+    const text = characters[Math.floor(Math.random() * characters.length)];
+    ctx.fillText(text, i * fontSize , drops[i] * fontSize );
+
+    drops[i] = (drops[i] + 1) % canvas.height;
+  }
+}
+
+function animate() {
+  draw();
+  requestAnimationFrame(animate);
+}
+
+animate();
 
 
 
