@@ -107,18 +107,19 @@ const ctx = canvas.getContext('2d');
 const characters = '||||||||||||||';
 const fontSize = canvas.width/12;
 const columns = Math.floor(canvas.width / fontSize);
+let fillStyle = '#f38cfb'
 
 const drops = [];
 for (let i = 0; i < columns; i++) {
   drops[i] = Math.random() * canvas.height;
 }
 
-function draw() {
+function draw(fillColor) {
 
   ctx.fillStyle = 'black';
-  ctx.fillRect(0, 1, canvas.width, canvas.height);
+  ctx.fillRect(0, 1, canvas.width, canvas.height)
 
-  ctx.fillStyle = '#f38cfb';
+  ctx.fillStyle = fillColor;
   ctx.font = `${fontSize}px monospace`;
 
   for (let i = 0; i < drops.length; i++) {
@@ -130,11 +131,18 @@ function draw() {
 }
 
 function animate() {
-  draw();
+  draw(fillStyle);
   requestAnimationFrame(animate);
 }
 
 animate();
 
+setInterval( () =>{
+  if (fillStyle === '#f38cfb'){
+    fillStyle = 'rgb(29, 220, 234)'
+  }else{
+    fillStyle = '#f38cfb'
+  }
 
 
+}, 2000)

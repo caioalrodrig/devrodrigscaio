@@ -73,7 +73,7 @@
     <div class="jumbotron ">
       <div class="greet">  
         <img src="utils/imgs/jumbo.svg" id="jumbo" alt="Jumbotron">
-        <img src="utils/imgs/pt_w.svg" id="hello" class ="d-none d-sm-none d-md-block reloading" alt="CanIHelp" >  
+        <img src="utils/imgs/pt_b.svg" id="hello" class ="d-none d-sm-none d-md-block reloading" alt="CanIHelp" >  
     </div> 
   </div>
   <div id="portfolio">
@@ -85,12 +85,10 @@
         <span class="card-info"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ullamcorper, massa et commodo elementum, urna urna tempor turpis, id lobortis purus est rutrum velit. Cras sodales pellentesque quam, sed vehicula risus lacinia in. Mauris sed hendrerit sapien, nec tincidunt augue. </span>
     </div>
     <div class="port-card">
-      <span> Web Pages. 
+      <span class="card-info"> Web Pages. 
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ullamcorper, massa et commodo elementum, urna urna tempor turpis, id lobortis purus est rutrum velit. Cras sodales pellentesque quam, sed vehicula risus lacinia in. Mauris sed hendrerit sapien, nec tincidunt augue. 
       </span>
-      <img id="tablet" src="utils/imgs/miniMD.png" >
-      <img id="smartphone" src="utils/imgs/miniXS.png" >
-
+      <img id="products" src="utils/imgs/products.png" >
     </div>
 
   </div>  
@@ -99,22 +97,23 @@
   <form id="formulario" class="gform pure-form pure-form-stacked forms" method="POST" 
     action="https://script.google.com/macros/s/AKfycbwrleHGhG-wj08xddtsgBtHkcVmh9SaLukjR00uxwhwcRayucdhSGR3u_CgGO3Kmsx5/exec">
 
-    <div class="form-elements">
+    <div class="form-elements" id="form-containers">
       <fieldset class="pure-group">
         <label id="user-name" for="name">Nome: </label>
         <input id="name" name="name" placeholder="" />
       </fieldset>
 
       <fieldset class="pure-group">
-        <label id="user-msg" for="message">Mensagem: </label>
-        <textarea id="message" name="message" rows="10"
-        placeholder="Diga em quê posso ser util..."></textarea>
-      </fieldset>
-
-      <fieldset class="pure-group">
         <label id="user-email" for="email"><em>Seu</em> Endereço de email:</label>
         <input id="email" name="email" type="email" value=""
         required placeholder="your.name@email.com"/>
+      </fieldset>
+
+
+      <fieldset class="pure-group">
+        <label id="user-msg" for="message">Mensagem: </label>
+        <textarea id="message" name="message" rows="10"
+        placeholder="Diga em quê posso ser util..."></textarea>
       </fieldset>
 
 
@@ -125,7 +124,7 @@
 
       <button id ="btnSend-text" class="button-success pure-button button-xlarge">
         <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
-    </div>
+      </div>
 
     <!-- Customise the Thankyou Message People See when they submit the form: -->
     <div class="thankyou_message" style="display:none;">
@@ -162,7 +161,7 @@
 </nav>
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script></body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
 <script src="index.js"></script>

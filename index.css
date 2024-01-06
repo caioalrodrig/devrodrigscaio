@@ -30,7 +30,7 @@ body{
 }
 
 
-/* NAVBAR                  
+/* [NAV]BAR                  
         */
 .navbar{
     display:flex;
@@ -40,6 +40,8 @@ body{
     padding: 0.5em;       
     align-items: center; 
     padding-bottom: 0;
+    background: radial-gradient(circle at bottom,   #e8dede00 5% , var(--bg-nav)  );
+
 }
 .navbar.scrolled{
    opacity: 0.5;
@@ -62,6 +64,7 @@ div.container{
     margin: 0;
     align-content: flex-start;
     justify-content: center;
+
 }
 div.MENU-nav{
     display: flex;
@@ -95,7 +98,6 @@ header a:not(.logo){
 .logo{
     max-width: 150px;
     margin: 5px 5px 5px 0;
-    animation: girar 16s linear infinite; 
 
   }
 .title_one{
@@ -162,6 +164,8 @@ header .btn-tog{
     border: 0.5px solid var(--btn-bo); 
     border-radius: 15px; 
     margin-top: 2vh;
+    box-shadow:  1px -1px chartreuse; /* Adiciona sombra ao botão */
+
     
 }
 header .btn-tog:active{
@@ -179,7 +183,7 @@ header .btn{
     background-color: var(--btn-bg); 
     color: #ffffff; /* Cor do texto ou do ícone */
     cursor: pointer;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao botão */
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5); 
     margin-right: 8px;
     margin-top: 2em;
 
@@ -260,6 +264,8 @@ body a {
     margin-left: 0;
     transition: transform 0.5s ease-in-out;
     background-color: rgba(0, 255, 255, 0);
+    background: radial-gradient(circle closest-side at center,var(--bg-nav) 5%, #88ff0000); 
+
     transform: translateX(-200%);   
     padding: 0; 
     padding-top: 30vh;
@@ -276,7 +282,7 @@ body a {
     transition: transform 1s ease-in-out; /* Adicionando uma transição suave */
     width: 14vw;
     height: auto;
-    z-index: 1;
+    z-index: 2;
 
 }
 #jumbo{
@@ -284,11 +290,12 @@ body a {
     max-height: 200vh;
     transition: transform 0.8s ease-in-out;
     position: relative;
-    z-index: 2;
+    z-index: 1;
     width: 40vw;
     height: auto;
     margin: 0;
     min-width: 350px;
+
     
 }
 #jumbo:hover{
@@ -297,8 +304,16 @@ body a {
 }
 /* CONTACT US 
     */
+    #form-containers{
+      display: flex;
+      margin-top: 2vh;
+
+    }
     textarea {
         width: 100%;
+        background-color: #ffffff79;
+        border: none;
+
       }
       .content-head {
         font-weight: 400;
@@ -330,6 +345,10 @@ body a {
       label{
         font-family: 'Share Tech Mono', monospace;
       }
+      input{
+        background-color: #ffffff8e;
+        border: none;
+      }
 
 
 
@@ -359,6 +378,7 @@ nav#footer{
     z-index: 2;
     position: relative;
     right: 55%;
+    top: 35%
   }
   
 .social_list li {
@@ -381,7 +401,7 @@ nav#footer{
 .copy_right {
     margin: 0 0;
     position: relative;
-    right: 53%;
+    right: 53.5%;
     z-index: 2;
   }
   
@@ -438,38 +458,23 @@ div.port-card{
   transform: translateY(-6vh);
   min-width: 200px;
 }
-#smartphone{
-  position: relative;
-  height: 30vh;
-  width: auto;
-  right: 30%;
-  top: 30px;
 
-}
-#tablet{
+#products{
   position: relative;
-  height: 30vh;
+  height: 35vh;
   width: auto;
   
 }
-span {
+.card-info {
   max-width: 20vw;
   min-width: 150px;
-  margin-right: 3vw;
   margin-left: 3vw;
 }
 
 .hidden{
   display: none;
 }
-@keyframes girar {
-  from {
-    transform: rotate(0deg); 
-  }
-  to {
-    transform: rotate(360deg); 
-  }
-}
+
 #cmatrixCanvas{
 display: block;
   position: relative;
