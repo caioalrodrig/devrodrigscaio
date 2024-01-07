@@ -86,7 +86,7 @@ div.MENU{
     display: flex;
     flex-direction: row;
 }
-div.title{ margin:0}
+div.title{ margin:0; align-items:baseline;}
 header a:not(.logo){
     color: #FFF;
     text-decoration: none;
@@ -96,23 +96,20 @@ header a:not(.logo){
     
 }
 .logo{
-    max-width: 150px;
     margin: 5px 5px 5px 0;
+    max-height: 30vh;
 
   }
-.title_one{
+span.title_one, span.title_two{
     font-size: 50px;
-    color:rgb(29, 220, 234);
-    font-family: 'Share Tech Mono', monospace;
-    
+      background: linear-gradient(to bottom, chartreuse, aqua);
+      background-clip: text; 
+      color: transparent; /* Torna o texto transparente para que o gradiente seja visível */
+      font-family: 'Share Tech Mono', monospace; 
+
 
 }
-.title_two{
-    font-size: 50px;
-    color:rgb(128, 234, 29);
-    font-family: 'Share Tech Mono', monospace;
 
-}
 header .title_one:hover {
     color:rgb(128, 234, 29);
 }
@@ -145,27 +142,26 @@ li{
     margin-right:1em;
     list-style:none;
 }
-header .btn-tog{
+.btn-tog{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: fit-content;
-    min-width: 3vw; 
+    width: 15%;  
+    min-width: 50px;
     height: 3.5vh; 
-    cursor: pointer;
     justify-self: flex-end;
     margin-right: 8px;
-    color: var(--btn-bo);
-    background-color: #ffffff00;
+    color: #FFF;
     border: 2px solid var(--btn-bo); 
     font-family: 'Share Tech Mono', monospace;
-    font-weight: bolder;
+    font-weight: normal;
     font-size: larger;
-    border: 0.5px solid var(--btn-bo); 
-    border-radius: 15px; 
-    margin-top: 2vh;
-    box-shadow:  1px -1px chartreuse; /* Adiciona sombra ao botão */
-
+    border: 0.5px solid var(--btn-bg); 
+    border-radius: 5px; 
+    background-color: var(--btn-bg)  ;
+    margin-top: 1vh;
+    margin-bottom: 1vh;  
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5); 
     
 }
 header .btn-tog:active{
@@ -174,8 +170,8 @@ header .btn-tog:active{
 }
 header .btn{
     display: flex;
-    justify-content: center;
-    align-items: center;
+
+
     width: 60px; 
     height: 30px; 
     border: 2px solid var(--btn-bo); 
@@ -217,7 +213,7 @@ header .btn:hover{
     div#menu_colapse.collapse-horizontal.collapse.show {
         min-height: 10px;
         margin-left: 0;
-        min-width: 60vw; /* Adicione ponto e vírgula aqui */
+        min-width: 60vw; 
     }
     
     div.card.card-body.MENUson {
@@ -306,13 +302,17 @@ body a {
     */
     #form-containers{
       display: flex;
+      flex-direction: column;
       margin-top: 2vh;
+      align-content: center;
 
     }
     textarea {
-        width: 100%;
-        background-color: #ffffff79;
+        width: 20vw;
+        background: linear-gradient(to bottom, #ffffff 20%, var(--bg-home));
         border: none;
+        height: 10vh;
+        min-width: 250px;
 
       }
       .content-head {
@@ -328,14 +328,14 @@ body a {
         color: white;
         border-radius: 4px;
         text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-        background: rgb(28, 184, 65); /* this is a green */
+        background: radial-gradient(circle  at center,var(--bg-nav) 5%, #88ff0000); 
+        margin-top: 1vh;
+        margin-bottom: 1vh;        
       }
       .button-xlarge {
         font-size: 125%;
       }
-      button {
-        float: right;
-      }
+
       #name, #email {
         width: 50%;
       }
@@ -346,10 +346,17 @@ body a {
         font-family: 'Share Tech Mono', monospace;
       }
       input{
-        background-color: #ffffff8e;
+        background: linear-gradient(to bottom, #ffffff 20%, var(--bg-home));
         border: none;
+        min-width: 100px;
       }
-
+      fieldset{
+        display: flex;
+        flex-direction: column;
+      }
+      #btnSend-text{
+        width: 90px;
+      }
 
 
 /* FOOTER
@@ -450,12 +457,13 @@ div.port-card{
 #gif1{
   max-width: 30vw;
   min-width: 200px;
-  transform: translateX(6vw);
+  transform: translateX(30%);
 
 }
 #gif2{
   max-width: 30vw;
-  transform: translateY(-6vh);
+  transform: translateX(-20%);
+  transform: translateY(-20%);
   min-width: 200px;
 }
 
@@ -468,7 +476,7 @@ div.port-card{
 .card-info {
   max-width: 20vw;
   min-width: 150px;
-  margin-left: 3vw;
+  margin-left: 1vw;
 }
 
 .hidden{

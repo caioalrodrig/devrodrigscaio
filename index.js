@@ -10,16 +10,10 @@ const h1A = document.getElementById("h-2")
 togg.addEventListener("click", () => {
   document.body.classList.toggle("dark");
 
-  // Verifica se a classe "dark" está presente no body
-  if (document.body.classList.contains("dark") && toggLang.innerText === 'En') {
-    hello_img.src = 'utils/imgs/pt_b.svg'
-  } else if(document.body.classList.contains("dark") && toggLang.innerText === 'Pt'){
-    hello_img.src = 'utils/imgs/en_b.svg'
-  } else if(!document.body.classList.contains("dark") && toggLang.innerText === 'En'){
-    hello_img.src = 'utils/imgs/pt_w.svg'
-  } else if(!document.body.classList.contains("dark") && toggLang.innerText === 'Pt'){
-    hello_img.src = 'utils/imgs/en_w.svg'
-  }
+  // // Verifica se a classe "dark" está presente no body
+  // if (document.body.classList.contains("dark") {
+  
+  // }
 });
 
 toggLang.addEventListener("click", () => {
@@ -36,11 +30,8 @@ toggLang.addEventListener("click", () => {
     email.innerHTML = "<em> Your </em> email address: "
     msgArea.placeholder= "Tell me what is in your mind..."
     sendBtn.innerHTML = "&nbsp;Send"
-    if (document.body.classList.contains("dark")){
-      hello_img.src = 'utils/imgs/en_b.svg'
-    }else{
-      hello_img.src = 'utils/imgs/en_w.svg'
-    }
+    hello_img.src = 'utils/imgs/en_b.svg'
+
 
   }else{
     toggLang.innerText = 'En'
@@ -49,11 +40,7 @@ toggLang.addEventListener("click", () => {
     email.innerHTML = "<em> Seu </em> endereço de e-mail: "
     msgArea.placeholder= "Diga em quê posso ser útil..."
     sendBtn.innerHTML = "&nbsp;Enviar"
-    if (document.body.classList.contains("dark")){
-      hello_img.src = 'utils/imgs/pt_b.svg'
-    }else{
-      hello_img.src = 'utils/imgs/pt_w.svg'
-    }
+    hello_img.src = 'utils/imgs/pt_b.svg'
   }
 });
 
