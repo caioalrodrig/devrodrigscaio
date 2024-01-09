@@ -4,16 +4,24 @@ const hello_img = document.getElementById("hello")
 const toggLang = document.getElementById("toggLang")
 const logo = document.getElementById("logoImg")
 const h1A = document.getElementById("h-2")
+const moon=document.getElementById("moon")
+const sun = document.getElementById("sun")
+const social_top = document.querySelector(".social_list_top")
 
 
 
 togg.addEventListener("click", () => {
   document.body.classList.toggle("dark");
 
-  // // Verifica se a classe "dark" está presente no body
-  // if (document.body.classList.contains("dark") {
-  
-  // }
+  //  Verifica se a classe "dark" está presente no body
+  if (document.body.classList.contains("dark")){
+    moon.style.visibility= "hidden"
+    sun.style.visibility= "visible"
+
+  }else{
+    moon.style.visibility= "visible"
+    sun.style.visibility= "hidden"
+  }
 });
 
 toggLang.addEventListener("click", () => {
@@ -52,11 +60,13 @@ document.addEventListener('scroll', () => {
 
     if (scrollPosition > 90) {
         navbar.classList.add('scrolled')
-        logo.classList.add("hidden")
+        social_top.style.visibility ="hidden"
+
         
     } else {
         navbar.classList.remove('scrolled')
-        logo.classList.remove("hidden")
+        social_top.style.visibility ="visible"
+
     }
 
 });
