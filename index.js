@@ -3,11 +3,20 @@ const togg = document.getElementById("toggle")
 const hello_img = document.getElementById("hello")
 const toggLang = document.getElementById("toggLang")
 const h1A = document.getElementById("h-2")
+const h1B = document.getElementById("h-1")
+
 const devInfo = document.getElementById("dev-p")
 const moon=document.getElementById("moon")
 const sun = document.getElementById("sun")
 const social_top = document.querySelector(".social_list_top")
 const footer = document.getElementById("footer")
+const devP = document.getElementById("dev-p")
+const cardP = document.querySelectorAll(".card-info")
+
+const enCards = ['<b>Refinery Supervisory.</b> Industrial desktop application with Modbus TCP protocol, SQLite data persistence, real-time plot, and user-friendly design. Developed in Python and Kivy.',
+              '<b>Web Page.</b> Landing page with a dynamic portfolio and contact form. Responsive and animated design using CSS. Developed in JavaScript.'] 
+const ptCards =['<b>Supervisório Refinaria.</b> Aplicativo desktop industrial com protocolo Modbus TCP, persistência de dados SQLite, realtime-plot e use-friendly design. Desenvolvido em Python e kivy.',
+              '<b>Web Page.</b> Página landing page com portfolio e formulário de contato dinâmico. Design responsivo e animado (css). Desenvolvido em javascript.']
 
 
 
@@ -41,8 +50,11 @@ toggLang.addEventListener("click", () => {
     sendBtn.innerHTML = "&nbsp;Send"
     hello_img.src = 'utils/imgs/en_b.svg'
     devInfo.innerText = "Electronic engineering, I am seeking partnerships and projects as a developer! Have a solid experience in backend (Python, Js, SQL), front-end (React, CSS, WordPress), AI, automation... "
-
-
+    if (cardP.length === enCards.length) {
+      for (let i = 0; i < cardP.length; i++) {
+        cardP[i].innerHTML = enCards[i];
+      }
+    }
   }else{
     toggLang.innerText = 'En'
     name.innerText = "Nome:"
@@ -52,8 +64,12 @@ toggLang.addEventListener("click", () => {
     sendBtn.innerHTML = "&nbsp;Enviar"
     hello_img.src = 'utils/imgs/pt_b.svg'
     devInfo.innerText = " Engenheiro eletricista de formação, busco parcerias e projetos como desenvolvedor! Sólida experiência back end (Python, Js, SQL), front-end (React, css, wordpress), IA, automação... "
-
+    if (cardP.length === ptCards.length) {
+      for (let i = 0; i < cardP.length; i++) {
+        cardP[i].innerHTML = ptCards[i];
+      }
   }
+}
 });
 
 /*Ofuscamento da .navbar .fixed-top ao rolar com o scroll*/
@@ -65,11 +81,16 @@ document.addEventListener('scroll', () => {
     if (scrollPosition > 90) {
         navbar.classList.add('scrolled')
         social_top.style.visibility ="hidden"
+        devP.style.transform = "translateY(-400px)";
+        h1A.style.visibility ="hidden"
+        h1B.style.visibility ="hidden"
 
         
     } else {
         navbar.classList.remove('scrolled')
         social_top.style.visibility ="visible"
+        h1A.style.visibility ="visible"
+        h1B.style.visibility ="visible"
 
     }
 

@@ -48,7 +48,7 @@ body{
 }
 .navbar.scrolled{
    opacity: 0.5;
-   background: radial-gradient(circle, #e8dede45, var(--bg-nav)); 
+   background: radial-gradient(circle, #e8dede28, var(--bg-nav)); 
 }
 div:not(.pc-MENU){
     display: flex;
@@ -332,6 +332,11 @@ p{
   color: var(--text-color);
 
 }
+#dev-p{
+  position: relative;
+  translate: 0 400px ;
+  transition: 1s;
+}
 a#link-contato{
   color: var(--text-color);
 }
@@ -354,6 +359,8 @@ div.port-card{
   flex-direction: row;
   border-radius: 2px;
   margin-top: 5vh;
+  font-weight: 600;
+
 }
 
 #gif1{
@@ -380,6 +387,7 @@ div.port-card{
   min-width: 300px;
   margin-left: 1vw;
   background: linear-gradient(45deg,var(--bg-home), #ffffff6c 95%  );
+  margin-bottom: 8px;
 
 }
 
