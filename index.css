@@ -239,10 +239,17 @@ header .btn:hover{
       align-content:center ;
       justify-items: center;
     }
-.social_list{
-  align-self: center;
-  justify-self: center;
-}
+  .social_list{
+    align-self: center;
+    justify-self: center;
+  }
+  img#gif1{
+    transform: translateX(0%);
+    margin: 2vh;
+  }
+  img#gif2{
+    margin-top: 10%;
+  }
 }
 /* MAIN 
         CONTENT */
@@ -266,13 +273,15 @@ header .btn:hover{
     padding: 0;
     flex-direction: row;
 }
-body a {
+a.social_list_top {
     color: #FFF;
     text-decoration: none;
     font-family: 'Share Tech Mono', monospace;
     font-size: calc(10px + 2vmin);
 }
-
+.social_list a{
+  color: var(--text-color);
+}
 .jumbotron {
     display: flex;
     flex-direction: row;
@@ -349,6 +358,9 @@ div#portfolio{
   justify-content: space-evenly;
   margin-top: 10vh;
   align-items: center;
+  background-color: rgba(179, 179, 179, 0.58);
+  padding: 20px;
+  margin-left: 0;
 }
 div#double-gif{
   display: flex;
@@ -358,8 +370,7 @@ div.port-card{
   display: flex;
   flex-direction: row;
   border-radius: 2px;
-  margin-top: 5vh;
-  font-weight: 600;
+  font-weight: 400;
 
 }
 
@@ -380,15 +391,16 @@ div.port-card{
   position: relative;
   height: 35vh;
   width: auto;
+  margin-top: 2vh;
   
 }
 .card-info {
   max-width: 20vw;
   min-width: 300px;
   margin-left: 1vw;
-  background: linear-gradient(45deg,var(--bg-home), #ffffff6c 95%  );
+  margin-bottom: 5vh;
   margin-bottom: 8px;
-
+  font-size: 26px;
 }
 
 /* CONTACT US 
@@ -398,12 +410,16 @@ div.port-card{
       flex-direction: column;
       margin-top: 2vh;
       align-content: center;
+      border: 1px solid rgba(0, 0, 0, 0.331);
+      border-radius: 4px;
+      padding: 10px;
 
     }
     textarea {
         width: 20vw;
         background: linear-gradient(to bottom, #ffffff 20%, var(--bg-home));
         border: none;
+        border-radius: 4px;
         height: 10vh;
         min-width: 250px;
 
@@ -436,6 +452,7 @@ div.port-card{
         display: none;
       }
       label{
+        font-size: 21px;
         font-family: 'Share Tech Mono', monospace;
         color: var(--text-color);
 
@@ -443,7 +460,8 @@ div.port-card{
       input{
         background: linear-gradient(to bottom, #ffffff 20%, var(--bg-home));
         border: none;
-        min-width: 100px;
+        border-radius: 2px;
+        min-width: 160px;
       }
       fieldset{
         display: flex;
@@ -452,6 +470,10 @@ div.port-card{
       #btnSend-text{
         width: 90px;
       }
+  #formulario{
+    margin: 5vh;
+  }
+
 /* FOOTER
          */
 
@@ -506,7 +528,7 @@ nav#footer{
   }
   
 .copy_right span {
-    font-weight: bold;
+    font-size: 24px;
     color: rgb(128, 234, 29);
     font-family: 'Share Tech Mono', monospace;
 }
@@ -525,6 +547,7 @@ nav#footer{
     }
         
 .copy_right span {
+    font-size: 24px;
     font-weight: bold;
     color: rgb(128, 234, 29);
 }

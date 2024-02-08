@@ -49,7 +49,7 @@ toggLang.addEventListener("click", () => {
     msgArea.placeholder= "Tell me what is in your mind..."
     sendBtn.innerHTML = "&nbsp;Send"
     hello_img.src = 'utils/imgs/en_b.svg'
-    devInfo.innerText = "Electronic engineering, I am seeking partnerships and projects as a developer! Have a solid experience in backend (Python, Js, SQL), front-end (React, CSS, WordPress), AI, automation... "
+    devInfo.innerText = "Software engineer, offer IT solutions as a developer and consultant. "
     if (cardP.length === enCards.length) {
       for (let i = 0; i < cardP.length; i++) {
         cardP[i].innerHTML = enCards[i];
@@ -63,7 +63,7 @@ toggLang.addEventListener("click", () => {
     msgArea.placeholder= "Diga em quê posso ser útil..."
     sendBtn.innerHTML = "&nbsp;Enviar"
     hello_img.src = 'utils/imgs/pt_b.svg'
-    devInfo.innerText = " Engenheiro eletricista de formação, busco parcerias e projetos como desenvolvedor! Sólida experiência back end (Python, Js, SQL), front-end (React, css, wordpress), IA, automação... "
+    devInfo.innerText = " Engenheiro de software, ofereço parcerias na área de TI como dev e consultor. "
     if (cardP.length === ptCards.length) {
       for (let i = 0; i < cardP.length; i++) {
         cardP[i].innerHTML = ptCards[i];
