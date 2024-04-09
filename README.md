@@ -3,7 +3,7 @@
 This is my personal portfolio page, showcasing information, contact details, and competencies. \
 Click and discover all the services offered!
 
-<a href="https://caioalrodrig.github.io/mypageIT">devCaioPage</a>
+<a href="https://caioalrodrig.github.io/devrodrigscaio/">devCaioPage</a>
 
 
 
