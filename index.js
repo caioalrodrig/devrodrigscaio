@@ -79,8 +79,8 @@ document.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY
 
     if (scrollPosition > 90) {
-        navbar.classList.add('scrolled')
-        social_top.style.visibility ="hidden"
+        navbar.classList.add('scrolled');
+        social_top.style.transform ="translateY(-20%);";
         devP.style.transform = "translateY(-400px)";
         h1A.style.visibility ="hidden"
         h1B.style.visibility ="hidden"
@@ -88,7 +88,7 @@ document.addEventListener('scroll', () => {
         
     } else {
         navbar.classList.remove('scrolled')
-        social_top.style.visibility ="visible"
+        social_top.style.transform ="translateY(-20%);"
         h1A.style.visibility ="visible"
         h1B.style.visibility ="visible"
 

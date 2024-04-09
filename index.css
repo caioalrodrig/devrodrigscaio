@@ -47,7 +47,7 @@ body{
 
 }
 .navbar.scrolled{
-   opacity: 0.5;
+   opacity: 0.3 !important;
    background: radial-gradient(circle, #e8dede28, var(--bg-nav)); 
 }
 div:not(.pc-MENU){
@@ -212,6 +212,9 @@ header .btn:hover{
     .title_one{font-size: 35px;}
     .title_two{font-size: 35px;}
     div.title{min-height: 10vh;}
+    nav.navbar.scrolled{
+      max-height: 100px !important;
+    }
 
     div.MENU.d-md-none {
         min-height: 10vh;
@@ -239,6 +242,7 @@ header .btn:hover{
       align-content:center ;
       justify-items: center;
     }
+
   .social_list{
     align-self: center;
     justify-self: center;
@@ -249,6 +253,9 @@ header .btn:hover{
   }
   img#gif2{
     margin-top: 10%;
+  }
+  .jumbotron{
+    padding-top: 40vh !important;
   }
 }
 /* MAIN 
